@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Header from './components/Header'
+import List from './components/List'
+import Footer from './components/Footer'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+
+    //初始化状态
+    state = {todos:[
+        {id:'001', name:'吃饭', done:true},
+        {id:'002', name:'睡觉', done:true},
+        {id:'003', name:'打代码', done:false},
+        {id:'004', name:'逛街', done:true},
+
+    ]}
+    
+    addTodo = (input) => {
+        const {todos} = this.state
+        let newEntry = {id:'00'+todos.length+1, name:input, done:false}
+        this.setState({todos:[...this.state.todos, newEntry]})
+        
+    }
+    render() {
+        const {todos} = this.state
+        return (
+            <div className="todo-container">
+              <div className="todo-wrap">
+                  <Header addTodo={this.addTodo}/>
+                  <List todos={todos}/>
+                  <Footer/>
+              </div>
+            </div>
+        )
+    }
 }
-
-export default App;

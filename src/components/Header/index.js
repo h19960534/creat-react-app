@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
 
 export default class Header extends Component {
+     
+    // 对传入的props的限制
+    static propTypes = {
+        addTodo:PropTypes.func.isRequired,                       
+    }
 
     //输入传递方法
     handleKeyUp = (event) => {

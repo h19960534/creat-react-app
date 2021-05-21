@@ -5,7 +5,7 @@ export default class Search extends Component {
     search = () => {
         const {keyWordElement:{value:keyWord}} = this
         console.log(keyWord)
-        axios.get(`http://localhost:3000/api1/search/users?q=${keyWord}`).then(
+        axios.get(`http://localhost:3000/api/search/users?q=${keyWord}`).then(
             response => console.log('成功了', response.data),
             error => console.log('失败了', error)
         )

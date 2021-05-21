@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
+import Search from './components/Search'
 import List from './components/List'
-import Footer from './components/Footer'
-import './App.css'
+
 
 
 export default class App extends Component {
-
-    
     render() {
         return (
-            <div>App...</div>
+            <div className="container">
+                <Search/>
+                <List/>
+            </div>
         )
     }
 }

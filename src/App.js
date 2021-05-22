@@ -1,15 +1,26 @@
 import React, { Component } from 'react'
-import Search from './components/Search'
-import List from './components/List'
 
 
 
 export default class App extends Component {
-    render() {
+
+    render() {           
         return (
-            <div className="container">
-                <Search/>
-                <List/>
+            <div>
+                <div className="row">
+                    <div className="col-xs-offset-2 col-xs-8">
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
             </div>
         )
     }

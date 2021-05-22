@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-
 
 
 export default class App extends Component {
-
-    getStudentData = () => {
-        axios.get('http://localhost:3000/students').then(
-            response => console.log('成功了', response.data),
-            error => console.log('失败了', error))
-    }
-    
-    render() {
+    render() {           
         return (
             <div>
-                <button onClick={this.getStudentData}>点我获取学生数据</button>
+                <div className="row">
+                    <div className="col-xs-offset-2 col-xs-8">
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+
             </div>
         )
     }
